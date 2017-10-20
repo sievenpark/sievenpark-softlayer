@@ -1,8 +1,7 @@
 Set-ExecutionPolicy Unrestricted -Force
-$client = new-object System.Net.WebClient 
-$client.DownloadFile( 'http://doublepeak.co.kr/lp.cab', 'c:\lp.cab')
+$client = new-object System.Net.WebClient
+$client.DownloadFile( 'http://doublepeak.co.kr/lp-2016.cab', 'c:\lp.cab')
 
+Add-WindowsPackage -Online -PackagePath "c:\lp.cab')"
 
-C:\Windows\System32\dism.exe /online /add-package /packagepath:C:\lp.cab
-
-Set-WinUserLanguageList ko-KR -Force
+Set-WinUserLanguageList 'ko-KR' -force                                            
